@@ -2,7 +2,8 @@
     "name": "Void Squid",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "arcade-browser": "github:pelikhan/arcade-browser#v0.0.4"
     },
     "files": [
         "main.blocks",
