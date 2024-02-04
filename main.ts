@@ -172,7 +172,7 @@ namespace userconfig {
     export const ARCADE_SCREEN_WIDTH = 240
     export const ARCADE_SCREEN_HEIGHT = 180
 }
-bossLife = 48
+bossLife = 72
 info.setLife(20)
 info.setScore(0)
 music.setVolume(20)
@@ -292,6 +292,12 @@ game.onUpdateInterval(150, function () {
             spell1()
         } else {
             if (bossProgress == 4) {
+                spell2()
+            }
+            if (bossProgress == 5) {
+                spell2()
+            }
+            if (bossProgress == 6) {
                 spell2()
             }
         }
