@@ -9,5 +9,8 @@
     "build-main-mobile": "cp ./fleek/fleek.config-main-main.json ./assets/fleek.config.json"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@fleekxyz/cli": "^0.7.3"
+  }
 }
