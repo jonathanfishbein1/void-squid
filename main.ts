@@ -24,9 +24,6 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.PlayerShot, function (sprite, oth
     }
     otherSprite.destroy()
 })
-controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    controller.moveSprite(mySprite, 50, 50)
-})
 function spell1 () {
     enemyShootAimingPlayer(boss, 90, 5)
 }
@@ -60,9 +57,6 @@ function preSetBossPosition (x: number, y: number) {
     offset = 0
     moveSpriteInTime(boss, x, y, 1)
 }
-controller.B.onEvent(ControllerButtonEvent.Released, function () {
-    controller.moveSprite(mySprite)
-})
 function moveSpriteRandomFixedTime (sprite: Sprite, yLowerBound: number, outerBound: number, t: number) {
     moveSpriteInTime(sprite, randint(outerBound, scene.screenWidth() - outerBound), randint(outerBound, yLowerBound), t)
 }
@@ -208,7 +202,7 @@ mySprite = sprites.create(img`
     ccc.............
     .c..............
     `, SpriteKind.Player)
-mySprite.setPosition(80, 105)
+mySprite.setPosition(200, 160)
 mySprite.setFlag(SpriteFlag.StayInScreen, true)
 controller.moveSprite(mySprite)
 boss = sprites.create(img`
