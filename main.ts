@@ -151,7 +151,7 @@ function createStarfield () {
     background = image.create(scene.screenWidth(), scene.screenHeight())
     background.fill(15)
     for (let row = 0; row <= numStars - 1; row++) {
-        background.setPixel(randint(0, scene.screenWidth()), randint(0, scene.screenHeight()), randint(3, 14))
+        background.setPixel(randint(0, scene.screenWidth()), randint(0, scene.screenHeight()), 1)
     }
     scene.setBackgroundImage(background)
 }
