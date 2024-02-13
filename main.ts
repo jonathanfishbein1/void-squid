@@ -52,8 +52,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, ot
     otherSprite.destroy()
 })
 info.onLifeZero(function () {
-    game.gameOver(false)
     web.open(info.score().toString())
+    game.gameOver(false)
 })
 function preSetBossPosition (x: number, y: number) {
     started = false
