@@ -1,6 +1,6 @@
 {
     "name": "Void Squid",
-    "version": "4.0.0",
+    "version": "5.0.0",
     "description": "",
     "dependencies": {
         "device": "*",
@@ -27,6 +27,6 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "blocksprj",
+    "preferredEditor": "tsprj",
     "disableTargetTemplateFiles": true
 }
