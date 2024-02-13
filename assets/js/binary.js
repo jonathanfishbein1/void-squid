@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-// meta={"simUrl":"https://simulator-mobile.starcada.io/","cdnUrl":"https://pxt.azureedge.net","version":"2.0.1","target":"arcade","targetVersion":"1.13.57","repo":"jonathanfishbein1/void-squid"}
-// total=1760499 new=6.96% cached=88.08% other=4.96%
-=======
 // meta={"simUrl":"https://trg-arcade.userpxt.io/v1.13.57/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"3.0.0","target":"arcade","targetVersion":"1.13.57","repo":"jonathanfishbein1/void-squid"}
 // total=1760770 new=7.01% cached=88.05% other=4.94%
->>>>>>> refs/remotes/origin/master
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
