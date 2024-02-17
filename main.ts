@@ -17,8 +17,8 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.PlayerShot, function (sprite, oth
         lifeBarPic.fillRect(bossLife * 2, 0, 96 - bossLife * 2, 5, 15)
         lifeBar.setImage(lifeBarPic)
         if (bossLife <= 0) {
-            game.over(true)
             web.open(info.score().toString())
+            game.over(true)
         } else if (bossLife % 12 == 0) {
             preSetBossPosition(80, 30)
         }
