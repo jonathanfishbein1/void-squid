@@ -17,8 +17,11 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.PlayerShot, function (sprite, oth
         lifeBarPic.fillRect(bossLife * 2, 0, 96 - bossLife * 2, 5, 15)
         lifeBar.setImage(lifeBarPic)
         if (bossLife <= 0) {
-            web.open(info.score().toString())
-            game.over(true)
+            game.splash("Level cleared")
+            ready = true
+            started = false
+            lifeBarProgress = 0
+            bossLife = BOSS_LIVES
         } else if (bossLife % 12 == 0) {
             preSetBossPosition(80, 30)
         }
@@ -154,12 +157,13 @@ function createStarfield () {
     }
     scene.setBackgroundImage(background)
 }
-let lifeBarProgress = 0
+let BOSS_LIVES = 60
 let bossProgress = 0
 let background: Image = null
 let numStars = 0
 let speed = 0
 let projectile: Sprite = null
+let lifeBarProgress = 0
 let ready = false
 let started = false
 let dy = 0
@@ -177,7 +181,7 @@ namespace userconfig {
     export const ARCADE_SCREEN_WIDTH = 240
     export const ARCADE_SCREEN_HEIGHT = 180
 }
-bossLife = 72
+bossLife = BOSS_LIVES
 info.setLife(20)
 info.setScore(0)
 music.setVolume(20)
