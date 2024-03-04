@@ -1,4 +1,4 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.13.57/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"6.0.3","target":"arcade","targetVersion":"1.13.57","repo":"jonathanfishbein1/void-squid"}
+// meta={"simUrl":"https://simulator-mobile.starcada.io/","cdnUrl":"https://pxt.azureedge.net","version":"6.0.3","target":"arcade","targetVersion":"1.13.57","repo":"jonathanfishbein1/void-squid"}
 // total=1809999 new=6.92% cached=88.05% other=5.03%
 (function (ectx) {
 'use strict';
