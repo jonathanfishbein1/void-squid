@@ -57,7 +57,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, ot
 })
 info.onLifeZero(function () {
     web.open(info.score().toString())
-game.gameOver(false)
+    game.gameOver(false)
 })
 function preSetBossPosition (x: number, y: number) {
     started = false
@@ -301,12 +301,15 @@ game.onUpdateInterval(150, function () {
             spell1()
         } else {
             if (bossProgress == 4) {
-                spell2()
+                spell1()
             }
             if (bossProgress == 5) {
                 spell2()
             }
             if (bossProgress == 6) {
+                spell1()
+            }
+            if (bossProgress > 6) {
                 spell2()
             }
         }
