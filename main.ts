@@ -177,7 +177,7 @@ let boss: Sprite = null
 let mySprite: Sprite = null
 let bossLife = 0
 let BOSS_LIVES = 0
-BOSS_LIVES = 60
+BOSS_LIVES = 48
 namespace userconfig {
     export const ARCADE_SCREEN_WIDTH = 240
     export const ARCADE_SCREEN_HEIGHT = 180
