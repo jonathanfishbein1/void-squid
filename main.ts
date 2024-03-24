@@ -27,6 +27,7 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.PlayerShot, function (sprite, oth
         }
     }
     otherSprite.destroy()
+    music.play(music.melodyPlayable(music.smallCrash), music.PlaybackMode.InBackground)
 })
 function spell1 () {
     enemyShootAimingPlayer(boss, 90, 5)
@@ -114,6 +115,7 @@ function shootBulletFromSprite (sourceSprite: Sprite, speed: number, angle: numb
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
             `)
+        music.play(music.melodyPlayable(music.pewPew), music.PlaybackMode.InBackground)
     } else {
         projectile.setImage(img`
             . . . . . . . . . . . . . . . . 
@@ -267,6 +269,7 @@ MAX = 10
 let bossCanMove = true
 preSetBossPosition(80, 30)
 createStarfield()
+music.setVolume(237)
 game.onUpdate(function () {
     if (Math.abs(boss.x - globalX) + Math.abs(boss.y - globalY) <= 2) {
         boss.setVelocity(0, 0)
