@@ -43,16 +43,23 @@ function nonSpell1 () {
     }
     offset += 13
 }
+let splashBase: Image = null
 function createSplashBase () {
+    splashBase = image.create(scene.screenWidth(), scene.screenHeight())
+    splashBase.drawImage(
+        titleImage
+        , 10
+        ,40
+    )
     currFont = drawStrings.createFontInfo(FontName.Font8, 1)
     drawStrings.writeCenter(
     "POWERED BY STARCADA",
-    titleImage,
+        splashBase,
     scene.screenHeight() / 2,
     1,
     currFont
     )
-    scene.setBackgroundImage(titleImage)
+    scene.setBackgroundImage(splashBase)
 }
 function spell2 () {
     for (let index = 0; index <= 4; index++) {
