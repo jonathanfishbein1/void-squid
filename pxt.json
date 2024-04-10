@@ -1,6 +1,6 @@
 {
     "name": "Void Squid",
-    "version": "6.0.4",
+    "version": "7.0.0",
     "description": "",
     "dependencies": {
         "device": "*",
