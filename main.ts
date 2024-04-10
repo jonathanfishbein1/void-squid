@@ -46,9 +46,11 @@ function nonSpell1 () {
 let splashBase: Image = null
 function createSplashBase () {
     splashBase = image.create(scene.screenWidth(), scene.screenHeight())
-    splashBase.drawImage(titleImage
-    , 10,
-    40)
+    splashBase.drawImage(
+        titleImage
+        , 10
+        ,40
+    )
     currFont = drawStrings.createFontInfo(FontName.Font8, 1)
     drawStrings.writeCenter(
     "POWERED BY STARCADA",
