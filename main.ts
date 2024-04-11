@@ -2,6 +2,7 @@ namespace SpriteKind {
     export const PlayerShot = SpriteKind.create()
     export const LifeBar = SpriteKind.create()
 }
+let gameStarted = false
 function moveSpriteInTime (sprite: Sprite, x: number, y: number, t: number) {
     globalX = x
     globalY = y
@@ -34,8 +35,10 @@ function spell1 () {
 function moveSpriteRandom (sprite: Sprite, yLowerBound: number, outerBound: number, v: number) {
     moveSprite(sprite, randint(outerBound, scene.screenWidth() - outerBound), randint(outerBound, yLowerBound), v)
 }
+
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    shootBulletFromSprite(mySprite, 200, -90)
+    if (gameStarted === true)
+        shootBulletFromSprite(mySprite, 200, -90)
 })
 function nonSpell1 () {
     for (let index2 = 0; index2 <= MAX - 1; index2++) {
@@ -242,7 +245,8 @@ namespace userconfig {
     export const ARCADE_SCREEN_HEIGHT = 180
 }
 createSplashBase()
-pause(5000)
+pause(4000)
+gameStarted = true
 bossLife = BOSS_LIVES
 info.setLife(20)
 info.setScore(0)
