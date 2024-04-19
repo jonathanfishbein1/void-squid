@@ -1,6 +1,6 @@
 {
     "name": "Void Squid",
-    "version": "7.1.0",
+    "version": "7.2.0",
     "description": "",
     "dependencies": {
         "device": "*",
@@ -12,7 +12,9 @@
         "main.ts",
         "README.md",
         "tilemap.g.jres",
-        "tilemap.g.ts"
+        "tilemap.g.ts",
+        "images.g.jres",
+        "images.g.ts"
     ],
     "testFiles": [
         "test.ts"
@@ -21,13 +23,13 @@
         "branch": "v0.12.17",
         "tag": "v0.12.17",
         "commits": "https://github.com/microsoft/pxt-arcade/commits/bbca8732cef11a27ce09394ba07a49d406ab792c",
-        "target": "2.0.1",
+        "target": "2.0.2",
         "pxt": "5.17.29",
         "targetId": "arcade"
     },
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "tsprj",
+    "preferredEditor": "blocksprj",
     "disableTargetTemplateFiles": true
 }
