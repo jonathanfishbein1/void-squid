@@ -18,7 +18,6 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.PlayerShot, function (sprite, oth
         lifeBarPic.fillRect(bossLife * 2, 0, 96 - bossLife * 2, 5, 15)
         lifeBar.setImage(lifeBarPic)
         if (bossLife <= 0) {
-            game.splash("Level cleared")
             ready = true
             started = false
             lifeBarProgress = 0
