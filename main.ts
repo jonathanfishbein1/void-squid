@@ -17,7 +17,6 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.PlayerShot, function (sprite, oth
         lifeBarPic.fillRect(bossLife * 2, 0, 96 - bossLife * 2, 5, 15)
         lifeBar.setImage(lifeBarPic)
         if (bossLife <= 0) {
-            game.splash("Level cleared")
             ready = true
             started = false
             lifeBarProgress = 0
@@ -35,7 +34,9 @@ function moveSpriteRandom (sprite: Sprite, yLowerBound: number, outerBound: numb
     moveSprite(sprite, randint(outerBound, scene.screenWidth() - outerBound), randint(outerBound, yLowerBound), v)
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    shootBulletFromSprite(mySprite, 200, -90)
+    if (gameStarted == true) {
+        shootBulletFromSprite(mySprite, 200, -90)
+    }
 })
 function nonSpell1 () {
     for (let index2 = 0; index2 <= MAX - 1; index2++) {
@@ -43,7 +44,6 @@ function nonSpell1 () {
     }
     offset += 13
 }
-let splashBase: Image = null
 function createSplashBase () {
     splashBase = image.create(scene.screenWidth(), scene.screenHeight())
     splashBase.drawImage(
@@ -51,10 +51,10 @@ function createSplashBase () {
         , 10
         ,40
     )
-    currFont = drawStrings.createFontInfo(FontName.Font8, 1)
+currFont = drawStrings.createFontInfo(FontName.Font8, 1)
     drawStrings.writeCenter(
     "POWERED BY STARCADA",
-        splashBase,
+    splashBase,
     scene.screenHeight() / 2,
     1,
     currFont
@@ -195,10 +195,12 @@ let lifeBarPic: Image = null
 let boss: Sprite = null
 let mySprite: Sprite = null
 let bossLife = 0
+let gameStarted = false
 let BOSS_LIVES = 0
-let titleImage: Image = null
-let text_list: number[] = []
 let headlinesY = 0
+let text_list: number[] = []
+let titleImage: Image = null
+let splashBase: Image = null
 titleImage = img`
     ....eee................eee.........eee22222eee.............eee......ee22222222222ee..........................ee222222222222e.............eee22222ee..............ee................eee......eee......e22222222222ee................
     ..2222222............222222e.....222222222222222.........e222222..e222222222222222222e.....................2222222222222222222e.......e22222222222222e.........222222e...........222222e..222222e..2222222222222222222e............
@@ -242,11 +244,13 @@ namespace userconfig {
     export const ARCADE_SCREEN_HEIGHT = 180
 }
 createSplashBase()
-pause(5000)
+pause(4000)
+music.setVolume(20)
+music.play(music.createSong(assets.song`Background music`), music.PlaybackMode.LoopingInBackground)
+gameStarted = true
 bossLife = BOSS_LIVES
 info.setLife(20)
 info.setScore(0)
-music.setVolume(20)
 mySprite = sprites.create(img`
     .......cc6c.....
     .......cc.cc....
