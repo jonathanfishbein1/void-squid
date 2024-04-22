@@ -329,11 +329,9 @@ pxtrt.mapKeyNames = [
  "map",
  "maxLifespan",
  "maxNegativeVelocity",
- "maxOffset",
  "maxSingleStep",
  "maxSpeed",
  "maxStep",
- "maxSubOffset",
  "maxVelocity",
  "measures",
  "melody",
@@ -455,7 +453,6 @@ pxtrt.mapKeyNames = [
  "setEffect",
  "setFactory",
  "setFlag",
- "setFont",
  "setHitbox",
  "setImage",
  "setKind",
@@ -470,8 +467,6 @@ pxtrt.mapKeyNames = [
  "setSound",
  "setSpeed",
  "setState",
- "setSubtext",
- "setText",
  "setTheme",
  "setVelocity",
  "setVolume",
@@ -538,7 +533,6 @@ pxtrt.mapKeyNames = [
  "up",
  "update",
  "updateCard",
- "updateFont",
  "updateIfInvalid",
  "updateParticle",
  "updateScrollTarget",
@@ -42929,7 +42923,7 @@ switch (step) {
 
     s.tmp_0 = game_init__P30403_mk(s);
     s.tmp_0.arg0 = undefined;
-    s.callLocIdx = 1307; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 1274; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     r0 = globals._scene___30395;
@@ -56014,7 +56008,6 @@ switch (step) {
 
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
@@ -56082,11 +56075,7 @@ function game_BaseDialog_update__P28308_mk(s) {
         parent: s, fn: game_BaseDialog_update__P28308, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
   arg0: undefined,
-  arg1: undefined,
 } }
 
 
@@ -64381,34 +64370,6 @@ function lambda_4_mk(s) {
   arg1: undefined,
   arg2: undefined,
   arg3: undefined,
-} }
-
-
-function Sprite__C2341_v5_1_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: null, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  arg0: undefined,
-} }
-
-
-function Sprite__C2341_v4_1_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: null, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  arg0: undefined,
 } }
 
 
