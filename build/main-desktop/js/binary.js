@@ -46514,9 +46514,6 @@ function particles_ParticleSource_factory__P28577_mk(s) {
     return {
         parent: s, fn: particles_ParticleSource_factory__P28577, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
   arg0: undefined,
 } }
 
@@ -64256,21 +64253,6 @@ function game_GameOverDialog__C28337_v1_1_mk(s) {
 } }
 
 
-function music_Playable__C34613_v0_2_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: null, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  arg0: undefined,
-  arg1: undefined,
-} }
-
-
 function if_callback_1_mk(s) {
     checkStack(s.depth);
     return {
@@ -66872,23 +66854,6 @@ const MovingSprite__C27916_VT = mkVTable({
   numFields: 7,
   classNo: 79,
   lastSubtypeNo: 79,
-  maxBgInstances: null,
-  methods: {
-  },
-  iface: {
-    "camera": null,
-    "set/camera": null,
-    "x": effects_SceneAnchor_x__P38090,
-    "y": effects_SceneAnchor_y__P38091,
-    "width": effects_SceneAnchor_width__P38092,
-    "height": effects_SceneAnchor_height__P38093,
-  },
-});
-const MovingSprite__C35227_VT = mkVTable({
-  name: "MovingSprite",
-  numFields: 7,
-  classNo: 70,
-  lastSubtypeNo: 70,
   maxBgInstances: null,
   methods: {
   },
