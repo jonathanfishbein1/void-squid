@@ -4,9 +4,9 @@
   "description": "> Open this page at [https://jonathanfishbein1.github.io/fight-fiat/](https://jonathanfishbein1.github.io/fight-fiat/)",
   "main": "indext.html",
   "scripts": {
-    "build-develop": "cp ./fleek/fleek.config.develop.json ./assets/fleek.config.json && deno run -A /home/jonathan/Documents/starcada-utils/replaceSimulatorUrl.ts develop ./ && cp -r assets ./build/develop",
-    "build-main-desktop": "cp ./fleek/fleek.config.main.desktop.json ./assets/fleek.config.json && deno run -A /home/jonathan/Documents/starcada-utils/replaceSimulatorUrl.ts main-desktop ./ && cp -r assets ./build/main-desktop",
-    "build-main-mobile": "cp ./fleek/fleek.config.main.mobile.json ./assets/fleek.config.json && deno run -A /home/jonathan/Documents/starcada-utils/replaceSimulatorUrl.ts main-mobile ./ && cp -r assets ./build/main-mobile"
+    "build-develop": "cp ./fleek/fleek.config.develop.json ./assets/fleek.config.json && deno run -A ../starcada-utils/replaceSimulatorUrl.ts develop && cp -r assets ./build/develop",
+    "build-main-desktop": "cp ./fleek/fleek.config.main.desktop.json ./assets/fleek.config.json && deno run -A ../starcada-utils/replaceSimulatorUrl.ts main-desktop && cp -r assets ./build/main-desktop",
+    "build-main-mobile": "cp ./fleek/fleek.config.main.mobile.json ./assets/fleek.config.json && deno run -A ../starcada-utils/replaceSimulatorUrl.ts main-mobile && cp -r assets ./build/main-mobile"
   },
   "author": "",
   "license": "ISC",
