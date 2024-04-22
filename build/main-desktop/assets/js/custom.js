@@ -15,5 +15,5 @@ addSimMessageHandler("web", (data) => {
     const targetWindow = window.parent
     console.log('window ', window)
     console.log('targetWindow ', targetWindow)
-    targetWindow.postMessage(data, '*')
+    targetWindow.postMessage(data, 'https://arcade.cardania.com')
 })

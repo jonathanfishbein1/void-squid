@@ -1,4 +1,4 @@
-// meta={"simUrl":"https://simulator-mobile.starcada.io/","cdnUrl":"https://pxt.azureedge.net","version":"7.2.0","target":"arcade","targetVersion":"2.0.2","repo":"jonathanfishbein1/void-squid"}
+// meta={"simUrl":"https://simulator-desktop.starcada.io/","cdnUrl":"https://pxt.azureedge.net","version":"7.2.0","target":"arcade","targetVersion":"2.0.2","repo":"jonathanfishbein1/void-squid"}
 // total=1980910 new=7.13% cached=87.91% other=4.96%
 (function (ectx) {
 'use strict';
