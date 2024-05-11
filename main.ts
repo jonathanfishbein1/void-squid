@@ -27,7 +27,8 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.PlayerShot, function (sprite, oth
     }
     otherSprite.destroy()
 })
-function spell1 () {
+function followPlayerPattern () {
+    console.log('followPlayerPattern')
     enemyShootAimingPlayer(boss, 90, 5)
 }
 function moveSpriteRandom (sprite: Sprite, yLowerBound: number, outerBound: number, v: number) {
@@ -38,7 +39,8 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         shootBulletFromSprite(mySprite, 200, -90)
     }
 })
-function nonSpell1 () {
+function circularPattern () {
+    console.log('circularPattern')
     for (let index2 = 0; index2 <= MAX - 1; index2++) {
         shootBulletFromSprite(boss, 60, 360 / MAX * index2 + offset)
     }
@@ -61,7 +63,8 @@ currFont = drawStrings.createFontInfo(FontName.Font8, 1)
     )
     scene.setBackgroundImage(splashBase)
 }
-function spell2 () {
+function wavePattern () {
+    console.log('wavePattern')
     for (let index = 0; index <= 4; index++) {
         shootBulletFromSprite(boss, 60, offset + index * 30)
     }
@@ -75,7 +78,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, ot
 })
 info.onLifeZero(function () {
     web.open(info.score().toString())
-game.gameOver(false)
+    game.gameOver(false)
 })
 function preSetBossPosition (x: number, y: number) {
     started = false
@@ -83,10 +86,8 @@ function preSetBossPosition (x: number, y: number) {
     offset = 0
     moveSpriteInTime(boss, x, y, 1)
 }
-function moveSpriteRandomFixedTime (sprite: Sprite, yLowerBound: number, outerBound: number, t: number) {
-    moveSpriteInTime(sprite, randint(outerBound, scene.screenWidth() - outerBound), randint(outerBound, yLowerBound), t)
-}
-function nonSpell2 () {
+function burstPattern () {
+    console.log('burstPattern')
     for (let index3 = 0; index3 <= MAX - 1; index3++) {
         shootBulletFromSprite(boss, 60, 360 / MAX * index3 + offset)
         shootBulletFromSprite(boss, 100, 360 / MAX * (index3 + 0.5) + offset)
@@ -352,7 +353,7 @@ game.onUpdate(function () {
 game.onUpdateInterval(750, function () {
     if (started) {
         if (bossProgress == 3) {
-            nonSpell2()
+            burstPattern()
         }
     }
 })
@@ -364,19 +365,19 @@ game.onUpdateInterval(2500, function () {
 game.onUpdateInterval(150, function () {
     if (started) {
         if (bossProgress == 2) {
-            spell1()
+            followPlayerPattern()
         } else {
             if (bossProgress == 4) {
-                spell1()
+                followPlayerPattern()
             }
             if (bossProgress == 5) {
-                spell2()
+                wavePattern()
             }
             if (bossProgress == 6) {
-                spell1()
+                followPlayerPattern()
             }
             if (bossProgress > 6) {
-                spell2()
+                wavePattern()
             }
         }
     }
@@ -384,7 +385,7 @@ game.onUpdateInterval(150, function () {
 game.onUpdateInterval(500, function () {
     if (started) {
         if (bossProgress == 1) {
-            nonSpell1()
+            circularPattern()
         }
     }
 })
