@@ -168,8 +168,8 @@ function enemyShootAimingPlayer (sprite: Sprite, speed: number, spread: number) 
     shootBulletFromSprite(sprite, speed, Math.atan2(mySprite.y - sprite.y, mySprite.x - sprite.x) * 57.3 + randint(0 - spread, spread))
 }
 function createStarfield () {
-    numStars = 80
-    background = image.create(scene.screenWidth(), scene.screenHeight())
+    const numStars = 80
+    , background = image.create(scene.screenWidth(), scene.screenHeight())
     background.fill(15)
     for (let row = 0; row <= numStars - 1; row++) {
         background.setPixel(randint(0, scene.screenWidth()), randint(0, scene.screenHeight()), 1)
@@ -177,8 +177,6 @@ function createStarfield () {
     scene.setBackgroundImage(background)
 }
 let bossProgress = 0
-let background: Image = null
-let numStars = 0
 let speed = 0
 let projectile: Sprite = null
 let currFont: FontInfo = null
